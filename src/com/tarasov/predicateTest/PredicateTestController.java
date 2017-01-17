@@ -9,6 +9,7 @@ public class PredicateTestController {
 
         Predicate <Integer> predicate = x -> x > 5;
         PredicateTestLogic.predicateTestLogic(predicate,35);
+        
     }
 
 }
