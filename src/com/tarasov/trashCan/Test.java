@@ -2,10 +2,7 @@ package com.tarasov.trashCan;
 
 import java.io.BufferedOutputStream;
 import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -15,7 +12,8 @@ public class Test {
 
 //        simplePredicateTest();
 //        flatMapTest();
-        reduceStreamTest();
+//        reduceStreamTest();
+        comparingMethodTest();
     }
 
     public static void simpleStreamMapTest() {
@@ -54,6 +52,15 @@ public class Test {
     public static void reduceStreamTest(){
         int summ = Stream.of(1,2,3,4).reduce(12,(acc,number) -> acc+number);
         System.out.println(summ);
+    }
+
+    public static void comparingMethodTest(){
+
+        List<String> stringList = Arrays.asList("ass","bz","zttttt","p");
+        stringList.forEach(System.out::println);
+        System.out.println("----------");
+        Collections.sort(stringList,Comparator.comparing(st->-st.length()));
+        stringList.forEach(System.out::println);
     }
 }
 
